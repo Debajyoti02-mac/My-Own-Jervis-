@@ -1,0 +1,20 @@
+# Stage 1-2: brain, tools, memory
+ollama
+chromadb
+python-dotenv
+requests
+duckduckgo-search
+
+# Stage 3: planning (uncomment later)
+ langgraph
+
+# Stage 4: voice (uncomment later)
+faster-whisper
+ openwakeword
+ piper-tts
+sounddevice
+ numpy
+
+# Stage 5: integrations (uncomment later)
+ google-api-python-client
+ google-auth-oauthlib

@@ -1,0 +1,10 @@
+[project]
+name = "mate"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "getenv>=0.2.0",
+    "langchain-groq>=1.1.3",
+]
