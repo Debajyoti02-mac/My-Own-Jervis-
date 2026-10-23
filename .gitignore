@@ -1,16 +1,12 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
-
-# Virtual environments
+cat > .gitignore <<'EOF'
 .venv/
-
-# Environment variables and secrets
+__pycache__/
 .env
-
-# Jupyter notebooks
-Base.ipynb
+credentials.json
+token.json
+*.db
+*.db-shm
+*.db-wal
+mate_chroma/
+input.wav
+EOF

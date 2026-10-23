@@ -18,3 +18,5 @@ sounddevice
 # Stage 5: integrations (uncomment later)
  google-api-python-client
  google-auth-oauthlib
+
+ langgraph-checkpoint-sqlite
