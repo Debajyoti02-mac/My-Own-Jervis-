@@ -1,0 +1,2 @@
+Neural Network: A computational model inspired by the brain's network of neurons, consisting of layers of interconnected nodes that process data, learn patterns, and make predictions through training on data.
+our neural network
