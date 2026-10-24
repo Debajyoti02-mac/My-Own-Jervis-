@@ -158,7 +158,6 @@ uvloop==0.23.0
 watchfiles==1.3.0
 wcwidth==0.9.3
 websocket-client==1.9.2
-websockets==17.3
 xxhash==4.0.2
 yarl==1.25.1
 zstandard==0.25.0
