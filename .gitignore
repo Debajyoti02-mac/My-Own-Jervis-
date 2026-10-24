@@ -9,4 +9,15 @@ token.json
 *.db-wal
 mate_chroma/
 input.wav
-EOF
+EOF.env
+credentials.json
+token.json
+data/
+mate_chroma/
+mate_memory.db*
+Note.txt
+input.wav
+Base.ipynb
+.venv/
+__pycache__/
+*.egg-info/

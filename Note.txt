@@ -1,2 +1,3 @@
 Neural Network: A computational model inspired by the brain's network of neurons, consisting of layers of interconnected nodes that process data, learn patterns, and make predictions through training on data.
 our neural network
+Machine learning is a field of AI that enables computers to learn patterns from data and make predictions or decisions without explicit programming. It includes supervised, unsupervised, and reinforcement learning techniques, using algorithms such as linear regression, decision trees, neural networks, and deep learning models.
