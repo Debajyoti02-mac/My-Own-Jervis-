@@ -10,7 +10,7 @@ ASSISTANT_NAME = "Jarvis"
 MODEL = "openai/gpt-oss-120b"
 MAX_MESSAGES = 20
 CREATOR = "Debajyoti"
-VOICE = "Veena"
+VOICE = "Rishi"
 
 DATA = ROOT / "data"
 DATA.mkdir(exist_ok=True)
