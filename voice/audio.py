@@ -11,7 +11,7 @@ from openwakeword.model import Model
 
 from settings import VOICE, WAKE_MODEL, WAKE_THRESHOLD
 
-
+BROWSER = "Brave Browser" 
 
 RATE = 16000
 _stt = None

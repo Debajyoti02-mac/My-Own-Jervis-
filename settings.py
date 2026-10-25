@@ -13,6 +13,8 @@ CREATOR = "Debajyoti"
 VOICE = "Rishi"
 TTS_ENGINE = "edge"                     
 EDGE_VOICE = "en-IN-NeerjaNeural" 
+BROWSER = "Brave Browser"  
+
 
 DATA = ROOT / "data"
 DATA.mkdir(exist_ok=True)
