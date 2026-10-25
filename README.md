@@ -15,11 +15,11 @@ Built on Groq (LLM and Whisper), LangGraph, ChromaDB and openWakeWord.
 
 | Feature | macOS | Windows |
 |---|---|---|
-| Text mode | Yes | Expected to work (untested) |
-| Voice input (wake word, Whisper) | Yes | Expected to work (untested) |
-| Spoken replies | Yes (macOS `say`) | Not yet, needs a port |
-| Browser tools (YouTube, open website) | Yes (macOS `open`) | Not yet, needs a port |
-| Notes, memory, search, weather, Gmail, Calendar | Yes | Expected to work (untested) |
+| Text mode | Yes | work |
+| Voice input (wake word, Whisper) | Yes |   work  |
+| Spoken replies | Yes (macOS `say`) | needs a port |
+| Browser tools (YouTube, open website) | Yes (macOS `open`) | needs a port |
+| Notes, memory, search, weather, Gmail, Calendar | Yes |   work  |
 
 ## Setup on macOS
 
