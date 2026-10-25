@@ -2,13 +2,16 @@ import io
 import subprocess
 import wave
 from pathlib import Path
-
+import warnings 
+warnings.filterwarnings('ignore')
 import openwakeword
 import sounddevice as sd
 from groq import Groq
 from openwakeword.model import Model
 
-from settings import WAKE_MODEL, WAKE_THRESHOLD   # also loads your .env
+from settings import VOICE, WAKE_MODEL, WAKE_THRESHOLD
+
+
 
 RATE = 16000
 _stt = None
@@ -22,6 +25,7 @@ def _client():
     return _stt
 
 
+# wake up model 
 def _wake_model():
     global _oww
     if _oww is None:
@@ -30,10 +34,12 @@ def _wake_model():
     return _oww
 
 
+# speak 
 def speak(text: str):
-    subprocess.run(["say", text])
+    subprocess.run(["say", "-v", VOICE, text])
 
 
+# Listning 
 def listen(seconds: int = 5) -> str:
     print("Listening...")
     audio = sd.rec(int(seconds * RATE), samplerate=RATE, channels=1, dtype="int16")
@@ -52,6 +58,7 @@ def listen(seconds: int = 5) -> str:
     return result.text.strip()
 
 
+# the wake up voice for jarvis 
 def wait_for_wake(threshold: float = WAKE_THRESHOLD):
     model = _wake_model()
     print("Waiting for wake word...")
@@ -63,7 +70,8 @@ def wait_for_wake(threshold: float = WAKE_THRESHOLD):
                 return
 
 
+# Confirm the voice 
 def voice_confirm(question: str) -> str:
-    print(question)                       # the full draft stays on screen
+    print(question)                       
     speak("Please confirm. Say yes or no.")
     return listen(seconds=4)
