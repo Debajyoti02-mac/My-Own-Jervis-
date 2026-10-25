@@ -11,6 +11,8 @@ MODEL = "openai/gpt-oss-120b"
 MAX_MESSAGES = 20
 CREATOR = "Debajyoti"
 VOICE = "Rishi"
+TTS_ENGINE = "edge"                     
+EDGE_VOICE = "en-IN-NeerjaNeural" 
 
 DATA = ROOT / "data"
 DATA.mkdir(exist_ok=True)

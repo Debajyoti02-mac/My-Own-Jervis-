@@ -8,9 +8,13 @@ import openwakeword
 import sounddevice as sd
 from groq import Groq
 from openwakeword.model import Model
+import asyncio
+import os
+import tempfile
 
-from settings import VOICE, WAKE_MODEL, WAKE_THRESHOLD
+import edge_tts
 
+from settings import EDGE_VOICE, TTS_ENGINE, VOICE, WAKE_MODEL, WAKE_THRESHOLD
 
 
 RATE = 16000
@@ -35,7 +39,22 @@ def _wake_model():
 
 
 # speak 
+def _speak_edge(text: str):
+    tmp = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
+    tmp.close()
+    try:
+        asyncio.run(edge_tts.Communicate(text, EDGE_VOICE).save(tmp.name))
+        subprocess.run(["afplay", tmp.name])
+    finally:
+        os.remove(tmp.name)
+        
 def speak(text: str):
+    if TTS_ENGINE == "edge":
+        try:
+            _speak_edge(text)
+            return
+        except Exception as e:
+            print("Edge voice unavailable, using the macOS voice:", e)
     subprocess.run(["say", "-v", VOICE, text])
 
 
